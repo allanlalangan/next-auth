@@ -12,10 +12,10 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <AuthProvider>
-      <html lang="en">
+    <html lang="en">
+      <AuthProvider>
         <body className="bg-slate-800 text-gray-50">{children}</body>
-      </html>
-    </AuthProvider>
+      </AuthProvider>
+    </html>
   );
 }
