@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import AuthProvider from "@/components/AuthProvider";
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <AuthProvider>
-        <body className="bg-slate-800 text-gray-50">{children}</body>
+        <body className="bg-slate-800 text-gray-50 min-h-screen flex flex-col">
+          {children}
+        </body>
       </AuthProvider>
     </html>
   );
