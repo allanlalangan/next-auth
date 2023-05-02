@@ -12,7 +12,12 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!
     })
-  ]
+  ],
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      return `${baseUrl}/dashboard`;
+    }
+  }
   // pages: {
   //   signIn: "/login"
   // }
