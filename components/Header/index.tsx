@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SignInButton from "../SignInButton";
 
 const Header = () => {
   return (
@@ -7,7 +6,6 @@ const Header = () => {
       <Link className="mx-2" href="/">
         Home
       </Link>
-      <SignInButton />
     </header>
   );
 };

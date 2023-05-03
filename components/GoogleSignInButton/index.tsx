@@ -2,17 +2,17 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
-const SignInButton = () => {
+const GoogleSignInButton = () => {
   const { data: session } = useSession();
   return (
     <button
       className="p-4 bg-slate-700 text-gray-50"
       onClick={() => {
-        !session ? signIn() : signOut();
+        !session ? signIn("google") : signOut();
       }}
     >
-      {!session ? "Sign In" : "Sign Out"}
+      {!session ? "Sign In With Google" : "Sign Out"}
     </button>
   );
 };
-export default SignInButton;
+export default GoogleSignInButton;
