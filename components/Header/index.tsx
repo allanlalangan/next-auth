@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SignOutButton from "../SignOutButton";
 
 const Header = () => {
   return (
@@ -6,6 +7,7 @@ const Header = () => {
       <Link className="mx-2" href="/">
         Home
       </Link>
+      <SignOutButton />
     </header>
   );
 };
