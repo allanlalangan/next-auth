@@ -1,16 +1,14 @@
 import Header from "@/components/Header";
 
 export default function DashboardLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center p-16">
-        {children}
-      </main>
+      <main className="grid-cols-12 grid p-4 gap-4">{children}</main>
     </>
   );
 }

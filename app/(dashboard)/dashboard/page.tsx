@@ -1,5 +1,6 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
@@ -9,5 +10,12 @@ export default async function Dashboard() {
     redirect("/signin");
   }
 
-  return <section>Dashboard</section>;
+  return (
+    <section>
+      <h1>Dashboard</h1>
+      <Link href="/projects" className="p-2 bg-teal-600">
+        Projects
+      </Link>
+    </section>
+  );
 }
