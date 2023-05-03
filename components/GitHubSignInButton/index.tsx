@@ -4,14 +4,16 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 const GitHubSignInButton = () => {
   const { data: session } = useSession();
+
   return (
     <button
-      className="p-4 bg-slate-700 text-gray-50"
+      disabled={!!session}
+      className="p-4 bg-slate-700 text-gray-50 mb-2"
       onClick={() => {
-        !session ? signIn("github") : signOut();
+        signIn("github");
       }}
     >
-      {!session ? "Sign In With GitHub" : "Sign Out"}
+      Sign In With GitHub
     </button>
   );
 };

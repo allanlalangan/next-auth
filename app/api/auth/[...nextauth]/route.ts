@@ -18,11 +18,6 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GITHUB_SECRET!,
     }),
   ],
-  callbacks: {
-    async redirect({ url, baseUrl }) {
-      return `${baseUrl}/dashboard`;
-    },
-  },
 };
 
 const handler = NextAuth(authOptions);
